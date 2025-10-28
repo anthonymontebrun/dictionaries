@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystemServicePack</sub_type>
+    <ranking>1</ranking>
+    <name>TECLIB - Windows Service Pack</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586352892.75136086</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Service Pack ([0-9]*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Service Pack #0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystemServicePack</sub_type>
+    <ranking>2</ranking>
+    <name>TECLIB - Darwin (Mac OS X)</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58635b142.28699039</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Darwin Kernel Version ([0-9\.]*):(.*)RELEASE_(.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Darwin Kernel Version #0 #2</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystemServicePack</sub_type>
+    <ranking>3</ranking>
+    <name>TECLIB - VMWare ESX</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586361c45.16343191</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/VMware (.*)build/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>VMWare #0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystemServicePack</sub_type>
+    <ranking>4</ranking>
+    <name>TECLIB - Redhat</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586368559.46518506</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(#1 SMP.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+  </rule>
+</rules>

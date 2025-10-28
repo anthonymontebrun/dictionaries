@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerType</sub_type>
+    <ranking>1</ranking>
+    <name>TECLIB - Ordinateur portable</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585849bd1.29372898</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(0F331C|0UF597)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(Portable|Notebook|Laptop|Docking)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Ordinateur portable</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerType</sub_type>
+    <ranking>2</ranking>
+    <name>TECLIB - Ordinateur fixe</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5858518b0.51472118</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/P4VM800|P4i65G|DG41TY|DG43GT|K8|775VM800|775i65G/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(All In One|Desktop|Tower|Lunch Box|Space-Saving|Space Saving|Zenith|Workstation)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Ordinateur fixe</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerType</sub_type>
+    <ranking>3</ranking>
+    <name>TECLIB - Serveur</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585859132.39434016</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Blade|Server|Chassis|Serveur|Venus|Multi-system|Sun Fire|System Planar/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Serveur</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerType</sub_type>
+    <ranking>4</ranking>
+    <name>TECLIB - Client léger</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585860dc4.40543937</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Thin client</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Client léger</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerType</sub_type>
+    <ranking>5</ranking>
+    <name>TECLIB - Machine virtuelle</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5858685e0.76742660</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Virtual|VMWare|Zone|libvirt|QEMU|Xen|Hyper/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Machine virtuelle</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerType</sub_type>
+    <ranking>6</ranking>
+    <name>TECLIB - Partition logique</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5858700c6.46665225</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>AIX_LPAR</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Partition logique</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerType</sub_type>
+    <ranking>7</ranking>
+    <name>TECLIB - VM VMware</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f66ead46-1cfed4d5-5371cd25ce4277.07850213</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>VMWare</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Machine virtuelle</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerType</sub_type>
+    <ranking>8</ranking>
+    <name>TECLIB - Tablette</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536d0a474e9606.34261176</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Hand Held/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Tablette</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerType</sub_type>
+    <ranking>9</ranking>
+    <name>TECLIB - Autres</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585877b29.30901421</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>7</condition>
+      <pattern>/Smartphone|Ordinateur fixe|Ordinateur portable|Tablette|Serveur|Machine Virtuelle|Client Léger|Partition Logique/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Autre</value>
+    </ruleaction>
+  </rule>
+</rules>

@@ -1,0 +1,3831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>1</ranking>
+    <name>TECLIB - 7-Zip</name>
+    <description>Logiciel 7-Zip</description>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863842f3.60427650</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^7-Zip ([1-9].*)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>7-Zip</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Igor Pavlov</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>2</ranking>
+    <name>TECLIB - WinRAR</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58638c0f4.89881965</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>win.rar GmbH</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/WinRAR [0-9]/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>WinRAR</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>3</ranking>
+    <name>TECLIB - Winzip</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863929f2.37484269</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Winzip</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Winzip [0-9]/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>WinZip</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>4</ranking>
+    <name>TECLIB - BlackBerry Desktop Software</name>
+    <description>Logiciel BlackBerry Desktop Software</description>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58639a2a8.79155733</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^BlackBerry Desktop Software ([1-9].*)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>BlackBerry Desktop Software</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>5</ranking>
+    <name>TECLIB - Mozilla</name>
+    <description>Logiciels Mozilla</description>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment>Supprimer le numéro de version du nom de chaque logiciel Mozilla</comment>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863a0861.03805258</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Mozilla (Firefox|Thunderbird|Sunbird|seamonkey)/    </pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Firefox|Thunderbird|Sunbird|seamonkey)$/ </pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(firefox)-([0-9].[0-9])/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(firefox)(.*)-i[3|5|6]86$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(firefox|thunderbird|thunbird|seamonkey).x86_64/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Mozilla #0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>manufacturer</field>
+      <value>Mozilla</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>6</ranking>
+    <name>TECLIB - Cisco Systems VPN Client</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863a7013.17959513</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>4</condition>
+      <pattern>Cisco Systems VPN Client</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Cisco Systems VPN Client</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>7</ranking>
+    <name>TECLIB - FileZilla Client</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863ada81.85432170</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/FileZilla Client (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>FileZilla Client</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>8</ranking>
+    <name>TECLIB - Gimp</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863b4106.50972850</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(The GIMP|GIMP) (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Gimp</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#1</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>9</ranking>
+    <name>TECLIB - Lotus SmartSuite</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863bc2c7.63635381</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Lotus SmartSuite Version ([0-9.])/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Lotus SmartSuite</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value/>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>10</ranking>
+    <name>TECLIB - LibreOffice</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863c4923.84941786</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^LibreOffice ([0-9\.]*)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>libreoffice</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>LibreOffice</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>The Document Foundation</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>11</ranking>
+    <name>TECLIB - Opéra</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863cd3a0.49231222</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>opera</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Opera</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value/>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>12</ranking>
+    <name>TECLIB - Microsoft Outlook</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>6af21a78-f37490bd-56bf7ab5d8ca46.82761415</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>Microsoft Outlook</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>Outlook</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Microsoft Corporation</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Outlook</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>13</ranking>
+    <name>TECLIB - VLC</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863de340.28141374</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>media</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>VLC</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value/>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>VideoLAN VLC media player</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>14</ranking>
+    <name>TECLIB - OpenOffice.org</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863e6b43.98336988</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^OpenOffice ([0-9\.]*)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^OpenOffice.org ([0-9\.]*)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Apache Software Foundation</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>OpenOffice</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>15</ranking>
+    <name>TECLIB - AutoIT</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863ef873.00801393</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/AutoIt v(.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>AutoIT</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>AutoIT Team</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>16</ranking>
+    <name>TECLIB - Apache HTTP Server</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863f8566.47263885</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Apache HTTP Server/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Apache HTTP Server</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Apache Software Foundation</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>17</ranking>
+    <name>TECLIB - Apache Tomcat</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586400ce3.79049511</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Apache Tomcat ([0-9\.]*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Apache Tomcat</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Apache Software Foundation</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>18</ranking>
+    <name>TECLIB - ActivePerl</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586409a69.87738015</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/ActivePerl/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>ActivePerl</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>ActiveState Software Inc</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>19</ranking>
+    <name>TECLIB - OCS Inventory Agent</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586412263.88451853</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/OCS Inventory NG (Agent|Agent Deployment Tool)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/OCS Inventory (Agent)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>OCS Inventory NG #0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>OCS Inventory NG Team</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>20</ranking>
+    <name>TECLIB - VMware vSphere Client</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58641afb4.47918820</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/VMware vSphere Client/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>VMware vSphere Client</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>VMWare</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>21</ranking>
+    <name>TECLIB - ALZip</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586423bb8.67415709</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>2</condition>
+      <pattern>ESTsoft Corp</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>ALZip</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>ALZip</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>22</ranking>
+    <name>TECLIB - BullZip PDF Printer</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58642cc97.17100509</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Bullzip PDF Printer (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Bullzip PDF Printer</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>BullZip</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>23</ranking>
+    <name>TECLIB - PeaZip</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586435705.22910459</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/PeaZip (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>PeaZip</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Giorgio Tani</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>24</ranking>
+    <name>TECLIB - bzip2-libs</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58643e5b5.22013030</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/bzip2-libs/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>bzip2-libs</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>25</ranking>
+    <name>TECLIB - ZipMail</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586446824.82204787</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>   /ZipMail V([0-9]*) (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>ZipMail #1</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>MK Net.Work</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>26</ranking>
+    <name>TECLIB - PowerArchiver</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58644fcf4.69406969</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/PowerArchiver ([0-9]*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>PowerArchiver #0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>ConeXware, Inc</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>27</ranking>
+    <name>TECLIB - Canon Internet Library for ZoomBrowser EX</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586458f61.46589443</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>Canon Internet Library for ZoomBrowser EX</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Canon Internet Library for ZoomBrowser EX</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Canon Inc</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>28</ranking>
+    <name>TECLIB - AutoCAD</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5864616f7.69363293</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Autodesk, Inc.</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/AutoCAD ([0-9]*) -/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>AutoCAD #0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Autodesk, Inc.</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>29</ranking>
+    <name>TECLIB - Adobe Reader</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58646a439.72077618</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>3</condition>
+      <pattern>KB</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe Reader ([0-9]|X)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Adobe Reader</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>30</ranking>
+    <name>TECLIB - FileZilla</name>
+    <description/>
+    <match>OR</match>
+    <is_active>0</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54a035b08e8602.39652583</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>filezilla</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Filezilla (.*) Client/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>FileZilla Client</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>FileZilla Project</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>31</ranking>
+    <name>TECLIB - Mises à jour Microsoft</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c76190bd3e35.92025736</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/.*KB([0-9]*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Update.*KB([0-9]*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Service Pack.*KB([0-9]*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Security.*KB([0-9]*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/{.*KB([0-9]*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Mise à jour.*KB([0-9]*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Correctif.*KB([0-9]*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Mise à jour Microsoft</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Microsoft</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>32</ranking>
+    <name>TECLIB - Java 2 Runtime Environment</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c76190cba966.60850791</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Java 2 Runtime Environment, Standard Edition v(.*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Java 2 Runtime Environment, SE v(.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Java 2 Runtime Environment</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Sun Microsystems</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>33</ranking>
+    <name>TECLIB - Java</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c76190d00916.57897752</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Java\(TM\) (. Update .*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Java (. Update .*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Java</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Sun Microsystems</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>34</ranking>
+    <name>TECLIB - Java SE Development Kit</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c76190d575a9.88029384</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(Java SE Development Kit) (. Update .*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Java SE Development Kit</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Sun Microsystems</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>35</ranking>
+    <name>TECLIB - Adobe Acrobat Pro X</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c76190d98600.06541620</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe Acrobat ([X|I]+) (\bPro\b|\bProfessional\b)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Adobe Acrobat Pro</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>36</ranking>
+    <name>TECLIB - Adobe After Effects</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c76190dd39d7.44468665</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe After Effects (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Adobe After Effects</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>37</ranking>
+    <name>TECLIB - Adobe Creative Suite</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c76190e0eab2.83021771</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe Creative Suite (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Adobe Creative Suite</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>38</ranking>
+    <name>TECLIB - Adobe Dreamweaver</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c76190e52279.69361661</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe Dreamweaver (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Adobe Dreamweaver</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>39</ranking>
+    <name>TECLIB - Adobe Illustrator</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c76190e8b0a6.82817829</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe Illustrator (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Adobe Illustrator</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>40</ranking>
+    <name>TECLIB - Adobe InDesign</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c76190ec7126.74166015</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe InDesign (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Adobe InDesign</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>41</ranking>
+    <name>TECLIB - Adobe Photoshop</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c76190f06193.17800559</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe Photoshop (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Adobe Photoshop</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>42</ranking>
+    <name>TECLIB - Adobe Photoshop Elements</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c76191000e17.96081803</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe Photoshop Elements (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Adobe Photoshop Elements</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>43</ranking>
+    <name>TECLIB - Adobe Premiere Pro</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c76191049390.80483952</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe Premiere Pro (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Adobe Premiere Pro</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>44</ranking>
+    <name>TECLIB - ZoomText</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c761910870e1.17370360</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^ZoomText (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>ZoomText</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>ZoomText</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>45</ranking>
+    <name>TECLIB - Microsoft Office</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c761910bf624.25031726</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft Office (Professionnel Plus) (.*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft Office (Standard Edition) (.*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Microsoft Office (Small Business) (.*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern> /Microsoft Office (Standard) (.*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft Office (Professional Hybrid) (.*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft Office (Starter) (.*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Microsoft Office (Basic Edition) (.*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Microsoft Office (Professional Plus) (.*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Microsoft Office (2000 SR-1) (Professional)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Microsoft Office (2000 SR-1) (Standard)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Microsoft Office (XP) (Standard)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Microsoft Office</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#0 #1</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Microsoft</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>46</ranking>
+    <name>TECLIB - Adobe Acrobat Pro</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c761911672a5.45936644</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe Acrobat ([0-9\.]+) (\bPro\b|\bProfessional\b)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Adobe Acrobat Pro</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>47</ranking>
+    <name>TECLIB - Adobe Acrobat Non Pro</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c761911a1a35.94162808</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Adobe Acrobat (.*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>7</condition>
+      <pattern>/^Adobe Acrobat ([X|I]+) (\bPro\b|\bProfessional\b)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe Acrobat ([0-9\.]+) (\bPro\b|\bProfessional\b)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Adobe Acrobat</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>48</ranking>
+    <name>TECLIB - Microsoft Office MUI</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c761911ffa60.99472658</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Microsoft Office</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>MUI</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Microsoft Office MUI</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Microsoft</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>49</ranking>
+    <name>TECLIB - Microsoft Office Proof</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54c761912426c8.70781519</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Microsoft Office Proof</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>3</condition>
+      <pattern>tools</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Microsoft Office Proof</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Microsoft</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>50</ranking>
+    <name>TECLIB - ADOBE - Acrobat Pro</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4230ee870.11325896</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>Adobe Acrobat Pro</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>Adobe Acrobat Professional</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Acrobat Pro</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>51</ranking>
+    <name>TECLIB - ADOBE - After Effects</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f42329e3c7.12382695</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Adobe (After Effects CS[0-9])/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Adobe (After Effects [0-9])/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>52</ranking>
+    <name>TECLIB - ADOBE - Dreamweaver</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4232d5464.96983606</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (Dreamweaver ((CC 2014)|(CS[0-9])|(MX)))$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Macromedia (Dreamweaver [0-9])$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Dreamweaver ((CC 2014)|(CS[0-9])|(MX)))$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Dreamweaver)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>53</ranking>
+    <name>TECLIB - ADOBE - Flash CS-CC/Builder</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f42332a232.42494969</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (Flash Builder ([0-9]))$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (Flash CS([0-9])?(.\d{1,2})?$)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (Flash CC (\d{4})?)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>54</ranking>
+    <name>TECLIB - ADOBE - InCopy</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423381d13.45220529</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (InCopy (CC|CS) ?(\d{1,4})?)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(InCopy (CC|CS) ?(\d{1,4})?)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>55</ranking>
+    <name>TECLIB - ADOBE - InDesign</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4233bebe8.61665423</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (InDesign (CC|CS)? ?(\d{1,4})?(.\d{1})?)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(InDesign (CC|CS)? ?(\d{1,4})?(.\d{1})?)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>56</ranking>
+    <name>TECLIB - ADOBE - Illustrator</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4233fbfb6.59610666</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (Illustrator (CC|CS)? ?(\d{1,4})?)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Illustrator ?(\d{1,2})?)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (Illustrator(®)? ?(\d{1,2})?)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>57</ranking>
+    <name>TECLIB - ADOBE - PhotoshopCS-CC/Lightroom/Elements/CameraRaw</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4234435d6.98925716</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (Photoshop(™)? ?(\d{1,4})?)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (Photoshop CC ?(\d{4})?)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (Photoshop Elements) ?(\d{1,4}(.0)?)?$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Photoshop)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Photoshop Camera Raw)(_x64)?$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe Photoshop (Lightroom) \d{1,4}(.\d)? ?(64-bit)?$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (Photoshop CS([0-9])?(.\d{1,2})? ?(\(64 Bit\))?$)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (Lightroom) \d{1,4}(.\d)? ?(64-bit)?$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Lightroom) \d{1,4}(.\d)? ?(64-bit)?$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>58</ranking>
+    <name>TECLIB - ANTIDOTE - Antidote</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4234e81f3.57072417</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(^Antidote .*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Antidote</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>59</ranking>
+    <name>TECLIB - APPLE - Aperture</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423521ef5.17747271</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Aperture/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Aperture</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Apple</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>60</ranking>
+    <name>TECLIB - APPLE - Compressor</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423567ea3.19463608</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Compressor/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Compressor</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Apple</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>61</ranking>
+    <name>TECLIB - APPLE - Final Cut</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4235a7816.81935451</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Final Cut (Pro|Express)) \d{1,4}(.\d)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Final Cut (Pro|Express))$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Apple</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>62</ranking>
+    <name>TECLIB - APPLE - Keynote</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4235e3c03.29204299</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Keynote)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Apple</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>63</ranking>
+    <name>TECLIB - APPLE - Motion</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423615121.43065179</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Motion)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Motion)(( FX| Pictures 1| Pictures HD))$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Apple</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>64</ranking>
+    <name>TECLIB - FILEMAKER INC - FileMaker</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f42364aa84.46031015</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(FileMaker Pro)( (\d{1}(.\d{1})?)| Advanced)?$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>FileMaker, Inc.</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>65</ranking>
+    <name>TECLIB - FOTOWARE - FotoWeb</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f42367cab5.32126490</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(FotoWeb Desktop)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>FotoWare</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>66</ranking>
+    <name>TECLIB - FOTOWARE - FotoStation</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4236a8df3.88178950</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(FotoStation ?(Classic)?$)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>FotoStation</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>manufacturer</field>
+      <value>FotoWare</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>67</ranking>
+    <name>TECLIB - IMAGING CORPORATION - ScanToPDF</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4236d2af4.27771674</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^ScanToPDF (\d?.?\d?.?\d?.?\d?$)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>ScanToPDF</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>O Imaging Corporation</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>68</ranking>
+    <name>TECLIB - JAM SOFTWARE - TreeSize Professional</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423700339.96444334</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(TreeSize Professional).*/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Jam Software</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>69</ranking>
+    <name>TECLIB - MICROMAT - Techtool</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f42372acd8.16751420</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(TechTool Pro) (\d{1,4}(.\d)?$)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(TechTool Deluxe)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>manufacturer</field>
+      <value>Micromat</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>70</ranking>
+    <name>TECLIB - MICROSOFT - Office</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f42375ed59.79817533</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Office365Service)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft (Office Profession(.*))/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Microsoft</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>71</ranking>
+    <name>TECLIB - MICROSOFT - Office Project</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423794570.68388896</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft Office (Project ((Standard|Professional) (\d{4}))$)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft (Project ((Standard|Professional) (\d{4}))$)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>manufacturer</field>
+      <value>Microsoft</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>72</ranking>
+    <name>TECLIB - MICROSOFT - SQL Server</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4237cc274.31478308</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Microsoft (SQL Server (\d{4}) ?(R2)?$)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Microsoft</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#1#2</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>73</ranking>
+    <name>TECLIB - MICROSOFT - SQL Express</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423804da0.47159607</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft (SQL Server (\d{4}) Express LocalDB)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Microsoft</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>74</ranking>
+    <name>TECLIB - MICROSOFT - Visio</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423830297.84818304</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft (Visio Professionnel \d{1,4})$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft (Visio Professional \d{1,4})$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft (Visio Premium \d{1,4})$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft (Visio Standard \d{1,4})$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft Office (Visio Professional \d{1,4})$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft Office (Visio Premium \d{1,4})$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft Office (Visio \d{1,4})$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Microsoft Office (Visio Standard \d{1,4})$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Microsoft</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>75</ranking>
+    <name>TECLIB - NETSUPPORT LTD - NetSupport School</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f42389c968.15545853</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(^NetSupport School)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>NetSupport Ltd</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>76</ranking>
+    <name>TECLIB - NIK SOFTWARE - Silver Efex Pro 2</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4238d40f0.26089459</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(^Silver Efex Pro 2)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Nik Software</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>77</ranking>
+    <name>TECLIB - OPEN TEXT CORPORATION - Secure Shell</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423901a10.99416066</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Open Text Secure Shell .*/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Connectivity Secure Shell .*/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Hummingbird Connectivity Secure Shell .*/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Secure Shell</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Open Text Corporation</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>78</ranking>
+    <name>TECLIB - PANIC INC - Coda</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4239401e7.85590364</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Coda [0-9]/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Coda/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Coda</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>manufacturer</field>
+      <value>Panic Inc.</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>79</ranking>
+    <name>TECLIB - QLIKTECH - QlikView</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f42397a663.06321579</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/((QlikView x86)|(QlikView x64))/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>QlikTech International AB</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>80</ranking>
+    <name>TECLIB - QUARKXPRESS - QuarkXPress</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4239a88b1.29731658</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(QuarkXPress Passport)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(QuarkXPress)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>QuarkXPress</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>81</ranking>
+    <name>TECLIB - QUEST SOFTWARE - Toad for Oracle</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f4239de7c3.39165420</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Toad for Oracle)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Toad for Oracle) (\d{1,4}(.\d) Freeware$)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Toad for Oracle) \d{1,4}(.\d)?$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Quest Software</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>82</ranking>
+    <name>TECLIB - RETROSPECT INC - Restrospect</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423a1b493.20149754</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(^(Retrospect Client)|(Retrospect Express))$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Retrospect Inc</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>83</ranking>
+    <name>TECLIB - ROROHIKO - Soxy</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423a49019.29100755</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(Soxy).*/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>manufacturer</field>
+      <value>Rorohiko</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>84</ranking>
+    <name>TECLIB - ROXIO - Toast Titanium</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423a74aa7.60411995</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Toast Titanium)( \d{1,4}(.\d)?$)?/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Toast Lite)( \d{1,4}(.\d)?$)?/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Toast 6 (Lite|Titanium))( \d{1,4}(.\d)?$)?/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>manufacturer</field>
+      <value>Roxio</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>85</ranking>
+    <name>TECLIB - STELLAR - Stellar</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423ab8e74.24108477</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(StellarPhoenix(.*))/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Stellar</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>86</ranking>
+    <name>TECLIB - SYMANTEC - Antivirus/Endpoint Protection</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423aeb372.72631964</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Symantec Endpoint Protection)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Symantec AntiVirus)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Symantec</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>87</ranking>
+    <name>TECLIB - SYMANTEC - NetBackup Client</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423b28102.43215183</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Symantec NetBackup Client|Veritas NetBackup Client)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>NetBackup Client</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#1</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>88</ranking>
+    <name>TECLIB - SYMANTEC - NetBackup</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423b60344.84511777</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>3</condition>
+      <pattern>Client</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Symantec NetBackup|Veritas NetBackup) (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>NetBackup</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#1</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>89</ranking>
+    <name>TECLIB - TELESTREAM - ScreenFlow</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423ba1fe4.04715166</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(ScreenFlow ?\d?.?\d?$)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Telestream</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>ScreenFlow</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>90</ranking>
+    <name>TECLIB - TIGERLOGIC - Omnis Studio</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423bd39f0.23123169</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Omnis Studio (\d?.?\d?.?\d?.?\d?$)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Omnis Studio</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Tigerlogic</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>91</ranking>
+    <name>TECLIB - VEEAM - Veeam</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423c0a476.74445240</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Veeam ONE) Monitor Client$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Veeam One)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Veeam One</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Veeam</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>92</ranking>
+    <name>TECLIB - VMWARE - Vsphere Client</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423c43026.84930177</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(VMware vSphere Client (\d{1,4}(.\d)$))/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>VMware</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>VMware vSphere Client</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>93</ranking>
+    <name>TECLIB - VMWARE - Fusion</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423c70004.29297729</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(VMware Fusion) ?(\d{1,4}$)?/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>VMware</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>94</ranking>
+    <name>TECLIB - VMWARE - Horizon</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423c9cb18.58552310</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(VMware Horizon View Client)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(VMware Horizon Client)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(VMware Horizon ThinApp)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>VMware</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>VMware Horizon Client</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>95</ranking>
+    <name>TECLIB - VMWARE -    VMware Infrastructure Client</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423ce1190.34539153</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(VMware Infrastructure Client)( (\d{1,4}(.\d)?$))?/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>VMware</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>96</ranking>
+    <name>TECLIB - VMWARE - VMware Workstation</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423d17987.39059498</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(VMware Workstation)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>VMware</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>VMware Workstation</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>97</ranking>
+    <name>TECLIB - WINRAR - Winrar</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423d4bab3.27923667</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(WinRAR).*/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>manufacturer</field>
+      <value>Winrar</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>98</ranking>
+    <name>TECLIB - XK72 - Charles Proxy</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5502f423d7dd31.38099620</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Charles .*/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Charles/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Charles Proxy</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>manufacturer</field>
+      <value>XK72</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>99</ranking>
+    <name>TECLIB - SA Color Finesse UI</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5503053874ec38.37220518</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/SA Color Finesse ([0-9]*) UI/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>SA Color Finesse UI</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Synthetic Aperture</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>100</ranking>
+    <name>TECLIB - LogMeIn</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-550437d5328bb5.47561203</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^LogMeIn[ ]?(Menubar|Diag|GUI|PluginUninstaller|Uninstaller|Client|Control Panel|Hamachi|Installer|Ignition)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>LogMeIn, Inc.</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>LogMeIn #0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>101</ranking>
+    <name>TECLIB - Refused unnamed Windows softwares</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5505c7b0a0b2b0.60124209</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^\{(.*)\}$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>_ignore_import</field>
+      <value>1</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>102</ranking>
+    <name>TECLIB - MOZILLA - Firefox</name>
+    <description/>
+    <match>OR</match>
+    <is_active>0</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5530f9ac8be153.74683801</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Firefox)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Mozilla (Firefox)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Mozilla (Firefox)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Firefox)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Mozilla</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>103</ranking>
+    <name>TECLIB - APPLE - Safari</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5530f9acaa54c7.23358122</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Safari)$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Apple</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>104</ranking>
+    <name>TECLIB - GOOGLE - Chrome</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5530f9acad4e46.60345664</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Google (Chrome)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Google (Chrome) Canary$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Google (Chrome) \d$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Chrome)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Google (Chrome) \[\d\]$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Google Inc.</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>105</ranking>
+    <name>TECLIB - ADOBE - Flash</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5530f9acb227b1.22787648</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Flash Player) ?\d?$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^Adobe (Flash Player) ?\d?\d? (ActiveX|Plugin|NPAPI) ?(\(x64\)|64-bit)?$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0 #1</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Adobe</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>106</ranking>
+    <name>TECLIB - MICROSOFT - Skype</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5530f9acb56597.29416855</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Skype)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Skype)_old$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Skype)(™)? \d.\d\d?$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>manufacturer</field>
+      <value>MICROSOFT</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>107</ranking>
+    <name>TECLIB - VIDEOLAN - VLC</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5530f9acb919a3.08874554</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(VLC)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(VLC) media player.*/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^VideoLAN VLC media player.*/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^vlc — Windows 7.*/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>VLC</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>VideoLAN</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>108</ranking>
+    <name>TECLIB - Internet Explorer</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>6af21a78-f37490bd-56bb3ae512c167.54220666</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>Internet Explorer</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Internet Explorer [0-9]*)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>Internet Explorer (64bit)</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>Internet Explorer x64</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Internet Explorer</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>manufacturer</field>
+      <value>Microsoft Corporation</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>109</ranking>
+    <name>TECLIB - Windows Internet Explorer (4 to 10)</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>6af21a78-f37490bd-56bb4130bb1e73.60525722</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Microsoft Internet Explorer ([0-9\.]*) SP/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Microsoft Internet Explorer ([0-9\.]*)$/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Windows Internet Explorer ([0-9\.])$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Internet Explorer</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>version</field>
+      <value>#0</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Microsoft Corporation</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>110</ranking>
+    <name>TECLIB - Google Chrome Frame</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>6af21a78-f37490bd-56bb94a8631180.19505222</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>Google Chrome Frame</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Google Chrome Frame</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Google Inc.</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>111</ranking>
+    <name>TECLIB - NTRU TCG Software Stack</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>6af21a78-f37490bd-56bc9c63b635f9.36888766</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>NTRU TCG Software Stack</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>NTRU TCG Software Stack</value>
+    </ruleaction>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Security Innovation</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnarySoftware</sub_type>
+    <ranking>112</ranking>
+    <name>TECLIB - Google Gmail</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>6af21a78-f37490bd-56bf74f8670dc6.68730198</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>Gmail</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>manufacturer</field>
+      <value>Google Inc.</value>
+    </ruleaction>
+  </rule>
+</rules>

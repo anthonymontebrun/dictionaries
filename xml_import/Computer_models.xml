@@ -1,0 +1,3229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>1</ranking>
+    <name>TECLIB - Machines virtuelles VMWare</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5855e7772.49954761</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>2</condition>
+      <pattern>VMWare</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>VMWare</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>2</ranking>
+    <name>TECLIB - SunFire &amp; SPARC Entreprise</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856af4b6.31656950</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(.*) \(SUNW/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Oracle</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>3</ranking>
+    <name>TECLIB - Lenovo G550</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856b7a57.88423333</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(2958)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>G550 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>4</ranking>
+    <name>TECLIB - Lenovo Thinkpad X220</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856c0f82.45680555</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>LENOVO</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((4290|4291|4296|4287|4286|NYD59).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad X220 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>5</ranking>
+    <name>TECLIB - Lenovo Thinkpad X230</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856c7991.62503518</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>LENOVO</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((2320|2324|2325|2322|2306).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad X230 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>6</ranking>
+    <name>TECLIB - Lenovo Thinkpad X1 Carbon</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856cce58.80061975</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(34442HU|3444CUU|129126U|34442HU|20A7002FUS|20A7002UUS|20A7002WUS|20A7002QUS|3317U|3444-B8U|20A70033US|3444G7U|3444CUU|3444F9U|N3NCKIX|R900FMF|34605B4|20A7005MGE|20A80052FR|344835G)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad X1 Carbon (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>7</ranking>
+    <name>TECLIB - Lenovo Thinkpad X61</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856d21b5.67321060</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(7767B8G|776395G|7674|767365G)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad X61 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>8</ranking>
+    <name>TECLIB - Lenovo Thinkpad X61S</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856d7cf0.53109810</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(766929G|766927G|76693KG)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad X61S (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>9</ranking>
+    <name>TECLIB - Lenovo Thinkpad T520</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536c86f253d663.14728422</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((4239|4240|4241|4242|4243|4246).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad T520 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>10</ranking>
+    <name>TECLIB - Lenovo Thinkpad X201 Tablet</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536c83311763e2.67150257</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((0053|0831|1234|2985|3093|3113|3144|3239).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad X201 Tablet (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>11</ranking>
+    <name>TECLIB - Lenovo Thinkpad X201</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536c7dfeb227d0.34110716</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((3249|3323|3357|3626|3680|3712|4492).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad X201 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>12</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M81</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536bf2680f11d3.83402027</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((0267|0385|4167|5023|5025|5049|5070|7518).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M81 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>13</ranking>
+    <name>TECLIB - Lenovo Thinkpad T510</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment>A finir</comment>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536befa6b56a73.45065293</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(4384.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad T510 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>14</ranking>
+    <name>TECLIB - Lenovo Thinkpad X200</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536be8ff7b6da6.43783829</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((7454|7455|7457|7458|7459|2023|2024).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad X200 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>15</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M58e</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536be50e5a3299.75795019</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((7259|7267|7269|7279|7290|7303|7306|7408|7487|7506|7514).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M58e (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>16</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M57p</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536be16a58be13.87432897</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((9013|9019|9088|9160|9164|9194|9304).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M57p (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>17</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M57</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536bc74b016b69.82107456</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((6010|6069|6075|6081|6086|9174|7103).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M57 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>18</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M58p</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585842bb1.06664791</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((3063|3285|7582|8494|6137|6234|7220|7346|7357|7483|7630|9964|8910).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M58p (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>19</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M58</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58583afb0.65471923</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((3231|5897|7571|9728|6258|6303|7174|7354|7360|7627|7638|8820|8910).*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M58 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>20</ranking>
+    <name>TECLIB - Lenovo Thinkpad Edge</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856dd204.05119169</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(0578AD8)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad Edge (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>21</ranking>
+    <name>TECLIB - Lenovo Thinkpad L430</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856e24d3.93219266</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(246[5|6|8].*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad L430 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>22</ranking>
+    <name>TECLIB - Lenovo Thinkpad L440</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856e7ec8.16150457</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(20A[S|T]00.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad L440 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>23</ranking>
+    <name>TECLIB - Lenovo Thinkpad L530</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856ed530.31084094</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(24[78|79|81].*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad L530 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>24</ranking>
+    <name>TECLIB - Lenovo Thinkpad L540</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856f2725.70161229</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(20A[U|V]00.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad L540 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>25</ranking>
+    <name>TECLIB - Lenovo Thinkpad T430i</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856f7df4.92350346</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(2344-(4U|BD|72|FE|FF|FH|FGFX|FY)G)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad T430i (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>26</ranking>
+    <name>TECLIB - Lenovo Thinkpad T430</name>
+    <description/>
+    <match>AND</match>
+    <is_active>0</is_active>
+    <comment>A finir</comment>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5856fd1b2.97567492</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(2344-(4(SG|BU|BR|G))|2347|2349)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad T430 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>27</ranking>
+    <name>TECLIB - Lenovo Thinkpad X1 Carbon Touch</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857025e8.52655071</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(20A8S0CV00|3444CUU|20A70037US|3444CWU)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad X1 Carbon Touch (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>28</ranking>
+    <name>TECLIB - Lenovo Thinkpad X240</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585707787.83773188</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((20AM|20AL|20MA).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad X240 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>29</ranking>
+    <name>TECLIB - Lenovo Thinkpad E420</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58570c211.32498336</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(1141A25)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad E420 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>30</ranking>
+    <name>TECLIB - Lenovo Thinkpad R40e</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585710b74.97269703</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(2684.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad R40e (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>31</ranking>
+    <name>TECLIB - Lenovo Thinkpad Tablet</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585716090.08443686</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(183[8|9].*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad Tablet (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>32</ranking>
+    <name>TECLIB - Lenovo Ideapad Yoga 13</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58571e5a5.89045388</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(2191)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Ieapad Yoga (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>33</ranking>
+    <name>TECLIB - Lenovo Thinkpad Edge E320</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585726cc0.97426531</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(1298A8G)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad Edge E320 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>34</ranking>
+    <name>TECLIB - IBM/Lenovo 300GL</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58572ed79.25813518</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern> /^((6288|6275|6278).*)/ </pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>300GL (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>35</ranking>
+    <name>TECLIB - IBM Netvista S42</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585737055.95196588</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>IBM</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(831[7-9])/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Netvista S42 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>36</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M72e</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58573e848.13426359</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(3267A1G)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M72e (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>37</ranking>
+    <name>TECLIB - IBM Netvista A21</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585746703.72880143</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>IBM</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(6339)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Netvista A21 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>38</ranking>
+    <name>TECLIB - IBM Thinkcentre A53</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58574df62.80613949</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(87H4657|9628.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre A53 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>39</ranking>
+    <name>TECLIB - IBM Thinkcentre E50</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585755b63.46953577</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern> /^(8818)/ </pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre E50 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>40</ranking>
+    <name>TECLIB - IBM Thinkcentre E51</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58575d535.63530183</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern> /^((8467|8714))/ </pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/IBM|Lenovo/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre E51 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>41</ranking>
+    <name>TECLIB - IBM Thinkcentre S50</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585764ff7.74668681</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>IBM</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern> /^((8183|8417))/ </pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre S50 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>42</ranking>
+    <name>TECLIB - IBM Thinkcentre S51</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58576c835.43572372</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>IBM</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern> /^(817[1-2](-|))/ </pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre S51 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>43</ranking>
+    <name>TECLIB - IBM Thinkcentre M17Z</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857744d7.10015534</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(1741A5G)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M17Z (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>44</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M92p</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58577bf34.62744671</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((2943|2967|2992|2999|3184|3190|3204|3212|3220|3226|3228|2941|2961|2988|2996|3183|3187|3202|3209|3218|3227|3236|3237|3238|3240|3242|3243).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M92p (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>45</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M92</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857839b3.56057585</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((2935|2960|2986|2994|3182|3186|3201|3208|3217|3226|2934|2945|2982|2993|3181|3185|3198|3207|3214|3224|3229|3234|3235).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M92 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>46</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M82</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58578b1f9.94993027</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((2697|2698|2742|2750|3391|3392|3302|2756|2800|2929|2932|3393|3395|3306).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M82 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>47</ranking>
+    <name>TECLIB - Lenovo Thinkcentre A61</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857930b8.50693203</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((9120|9127|9126|9128|9129|9130|9134|9135|9136|9137|9139|9140|9141|9142|9143|9144|9156|9157|9158|9169|9171|9189|9191).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre A61 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>48</ranking>
+    <name>TECLIB - IBM System p5 570</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58579a893.41312663</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>IBM</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(9117-570)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>IBM System p5 570-[#0]-</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>49</ranking>
+    <name>TECLIB - IBM System p5 595</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857a2741.11400042</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>IBM</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(9119-595)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>IBM System p5 595-[#0]-</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>50</ranking>
+    <name>TECLIB - IBM eserver xSeries 205</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857aa3a8.50113683</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>IBM</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/\[((8480|8480).*)\]/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>IBM eserver xSeries 205-[#0]-</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>51</ranking>
+    <name>TECLIB - IBM eserver xSeries 206</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857b1e01.97060565</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>IBM</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/\[((848[2|7]).*)\]/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>IBM eserver xSeries 206-[#0]-</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>52</ranking>
+    <name>TECLIB - IBM NETFINITY 3000</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857b9c52.60739429</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>IBM</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((8476[20|30|31]).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>NETFINITY 3000 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>53</ranking>
+    <name>TECLIB - IBM eserver xSeries 200</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857c1937.15745387</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>IBM</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/\[(847[8|9].*)\]/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>IBM eserver xSeries 200-[#0]-</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>54</ranking>
+    <name>TECLIB - Lenovo/IBM 3000 - J105</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857c9197.33547654</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/(IBM|Lenovo)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(8258J6F)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>3000J 105 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>55</ranking>
+    <name>TECLIB - Samsung Galaxy Tab 2 10.1</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857d1455.38061209</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(GT-P5110|GT-P5113|GT-P5100|SCH-I915)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Galaxy Tab 2 10.1</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>56</ranking>
+    <name>TECLIB - Samsung Galaxy Tab</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857d9521.19337403</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(GT-P1010|GT-P1000|SCH-I800)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Samsung Galaxy Tab</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>57</ranking>
+    <name>TECLIB - Samsung Galaxy Tab 10.1</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857e1590.12172584</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/GT-P7510|GT-P7500|SCH-I905/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Galaxy Tab 10.1</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>58</ranking>
+    <name>TECLIB - Samsung Galaxy Tab 10.1v</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857e9404.86501852</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>GT-P7100</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Galaxy Tab 10.1v</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>59</ranking>
+    <name>TECLIB - Samsung Galaxy Tab 8.9</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857f12a4.59486633</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/GT-P7310|GT-P7300|SGH-I957/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Galaxy Tab 8.9</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>60</ranking>
+    <name>TECLIB - Lenovo Thinkpad T500</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-1cfed4d5-5368bee17607f6.84162351</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((2055|2056|2081|2082|2083|2087|2088|2089|2241|2242|2243|2246|22472261).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad T500 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>61</ranking>
+    <name>TECLIB - Samsung Galaxy Tab 7 Plus</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5857f9108.56370709</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/GT-P6210|GT-P6200/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Galaxy Tab 7 Plus</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>62</ranking>
+    <name>TECLIB - Lenovo Thinkpad A55</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-1cfed4d5-5368c0350e26f6.97636815</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((8705|8706|8972|8975|8982|8985|8994|9265).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad A55 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>63</ranking>
+    <name>TECLIB - Samsung Galaxy Tab 7.7</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585801a60.84246979</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/GT-P6810|GT-P6800|SCH-I815/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Galaxy Tab 7.7</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>64</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M55e</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-1cfed4d5-5368c1082f9297.58261088</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((6490|6491|9278|9279|9288|9379|9380|9389|9632|9637|9648|9649).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad M55e</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>65</ranking>
+    <name>TECLIB - Samsung Galaxy Tab 2 7.0</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58580a1e6.51837792</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/GT-P3110|GT-P3100|SCH-I705/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Galaxy Tab 2 7.0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>66</ranking>
+    <name>TECLIB - Lenovo Thinkpad W500</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-1cfed4d5-5368c1da944611.33550350</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((4058|4061|4062|4063|4064|4065).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad W500 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>67</ranking>
+    <name>TECLIB - Samsung Galaxy Tab 2 10.1</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585812c00.61565938</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/GT-P5110|GT-P5113|GT-P5100|SCH-I915/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Galaxy Tab 2 10.1</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>68</ranking>
+    <name>TECLIB - Samsung Galaxy Tab 3 7.0</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58581aa41.52349375</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/SM-T210|SM-T211/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Galaxy Tab 3 7.0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>69</ranking>
+    <name>TECLIB - Samsung Galaxy Tab 3 8.0</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f585823272.27098572</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/SM-T310|SM-T311|SM-T315/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Galaxy Tab 3 8.0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>70</ranking>
+    <name>TECLIB - Samsung Galaxy Tab 3 10.1</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58582b124.16516805</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/GT-P5210|GT-P5200|GT-P5220/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Galaxy Tab 3 10.1</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>71</ranking>
+    <name>TECLIB - Toshiba Satellite Pro</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment>Avec anciens avec OCS</comment>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5858331a4.71720368</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Toshiba</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(SP[0-9]*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Satellite Pro #0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>72</ranking>
+    <name>TECLIB - Lenovo Thinkpad T530</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536c8d60c5dd21.27803158</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((2392|2429).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad T530 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>73</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M83</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536c8fa61b3438.12694053</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((1083|10AH|10AN|10AM|10AJ).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M83 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>74</ranking>
+    <name>TECLIB - Lenovo Thinkpad T540</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536c909fdf0006.99483807</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((20BE).*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad T540 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>75</ranking>
+    <name>TECLIB - Lenovo Thinkpad Helix</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536c91fa56e045.64809261</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((3701|3698).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad Helix (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>76</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M73</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536c936aae3634.68188640</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((10AY|10AX|10B4).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M73 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>77</ranking>
+    <name>TECLIB - Lenovo Thinkpad T420i</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment>Doit être avant la règle du T420 !</comment>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-1cfed4d5-536cf3435766e4.82890818</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(4177-QGU|4177-R2U)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad T420i (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>78</ranking>
+    <name>TECLIB - Lenovo Thinkpad T420</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-1cfed4d5-536ced592cbbb3.87202735</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((4177|4178|4180|4236).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad T420 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>79</ranking>
+    <name>TECLIB - Lenovo Thinkpad T500</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536d078cae8245.59941627</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((2242|2243|2082|2089|2055|2241|2056|20892055|2241|2056).*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad T500 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>80</ranking>
+    <name>TECLIB - Lenovo Thinkpad W500</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536d157df3bcc1.38757865</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((406[1|2|3]).*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad W500 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>81</ranking>
+    <name>TECLIB - Samsung ATIV Smart PC</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536e473a7bf9c3.05920870</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((700T1C).*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Samsung</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>ATIV Smart PC Pro (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>82</ranking>
+    <name>TECLIB - Sony Vaio Pro</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536e4a72642a87.63320625</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((SVP).*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Sony</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Vaio Pro (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>83</ranking>
+    <name>TECLIB - Sony Vaio</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536e4c47e5eec6.27388547</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((PCG|SV|VG).*)/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Sony</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Vaio (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>84</ranking>
+    <name>TECLIB - Lenovo Thinkpad Tablet 2</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536f24184b8483.88092646</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((3679).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad Tablet 2 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>85</ranking>
+    <name>TECLIB - Intel NUC</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment>http://en.wikipedia.org/wiki/Next_Unit_of_Computing</comment>
+    <is_recursive>0</is_recursive>
+    <uuid>987a23e3-d9d62df8-536f3eaaeb4e39.33057084</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Intel</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((D[C|E|N|3|5]).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Intel NUC (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>86</ranking>
+    <name>TECLIB - Machines virtuelles Hyper-V</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f66ead46-1cfed4d5-5371cb1deb0df5.95432639</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>2</condition>
+      <pattern>Microsoft</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Hyper-V</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>87</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M71e</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-544572c10f7142.50360749</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((3129|3133|3136|3141|4150|3156|3166|3175|3177).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M71e (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>88</ranking>
+    <name>TECLIB - Lenovo Thinkpad L512</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5bb7a20a-f37490bd-53752484471ad1.03554307</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((2550|2597|2598|2599|4444|4447).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad L512 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>89</ranking>
+    <name>TECLIB - Lenovo 3000 N100</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5bb7a20a-f37490bd-5375258ac082e8.11678763</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((0689|0768).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>3000 N100 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>90</ranking>
+    <name>TECLIB - Lenovo Thinkpad L520</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5bb7a20a-f37490bd-5375264ba4d9b1.37071492</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((5015|5016|5017|7859|7860).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad L520 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>91</ranking>
+    <name>TECLIB - Inconnu</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5bb7a20a-f37490bd-53ff56aedad649.49773379</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/00000000/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Inconnu</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>92</ranking>
+    <name>TECLIB - HP 8200 Elite</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5bb7a20a-f37490bd-53ff57795236a3.93538794</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>8200 Elite</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>8200 Elite</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>93</ranking>
+    <name>TECLIB - IBM Thinkpad R51</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54423f0bcb6f11.54070657</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>IBM</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((1829|2883|2887|2888|2889|2894|2895).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad R51 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>94</ranking>
+    <name>TECLIB - IBM Power 750 Express</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54440027770281.43419777</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>IBM</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(8233-E8B)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Power 750 Express (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>95</ranking>
+    <name>TECLIB - IBM Thinkcentre A52</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-544401489c7469.38412820</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((8153|8166|8167|8168|8169|8170).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre A52 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>96</ranking>
+    <name>TECLIB - IBM Thinkcentre M52</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54440686742519.86972618</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((8110|8112|8113|8114|8115).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M52 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>97</ranking>
+    <name>TECLIB - IBM Thinkcentre M51</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5444079db1a5d6.63077717</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((8138|8123|8424|8122|8144|8141|8143).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M51 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>98</ranking>
+    <name>TECLIB - IBM Thinkcentre A30</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54440ef4d1f240.37773391</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((8198|8434|8191|8199).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre A30 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>99</ranking>
+    <name>TECLIB - IBM Thinkpad T42</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54441026725090.67380501</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((2373|2378).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre T42 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>100</ranking>
+    <name>TECLIB - IBM Thinkcentre A51</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54441208218681.07670190</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((8137|8123|8105|8107).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre A51 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>101</ranking>
+    <name>TECLIB - IBM Thinkpad R50e</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-544413940baf68.41525755</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>IBM</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((1834).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad R50e (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>102</ranking>
+    <name>TECLIB - IBM Thinkcentre A50</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-544414653a2219.62832358</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((8084|8085|8126|8147|8148|8149|8174|8175|8176|8177|8178).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre A50 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>103</ranking>
+    <name>TECLIB - IBM Thinkcentre M50e</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-544415a6a26973.78620366</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((8179).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M50e (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>104</ranking>
+    <name>TECLIB - IBM IntelliStation M Pro</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-544416a3d12a92.66045715</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((6225|6228|6219|9229|6229|6230).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>IntelliStation M Pro (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>105</ranking>
+    <name>TECLIB - IBM Thinkpad A22m</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54441ac0d50cc8.72388782</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((2628).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkpad A22m (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>106</ranking>
+    <name>TECLIB - IBM IntelliStation Z Pro</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54441c5de47913.93590988</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((9228|6223|6221|6227).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>IntelliStation Z Pro (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>107</ranking>
+    <name>TECLIB - IBM IntelliStation A Pro</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54441d71b25798.19350744</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((9228|6223|6221|6227).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>IntelliStation A Pro (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>108</ranking>
+    <name>TECLIB - IBM IntelliStation E Pro</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54441dd2696e64.96357845</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((9228|6223|6221|6227).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>IntelliStation E Pro (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>109</ranking>
+    <name>TECLIB - IBM IntelliStation R Pro</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-54441e66c4f4a6.93831410</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((6851|8454).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>IntelliStation R Pro (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>110</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M73z</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5445ec5d3e5875.98944188</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((10BB|10BC).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M73z (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>111</ranking>
+    <name>TECLIB - Lenovo Thinkcentre Edge 72</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5445ef14bd16d9.23061055</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((3484|RCFKAFR|RCCFMFR|RCCLCFR).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre Edge 72 (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>112</ranking>
+    <name>TECLIB - Lenovo Thinkcentre E73 10AS</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5445f247909369.11726954</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>0</condition>
+      <pattern>Lenovo</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((10AS|10AU).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre E73 10AS (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>113</ranking>
+    <name>TECLIB - Lenovo Thinkcentre M71z</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5445f34da1fb99.54781486</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((1741).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>Thinkcentre M71z (#0)</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryComputerModel</sub_type>
+    <ranking>114</ranking>
+    <name>TECLIB - Lenovo 3000 N200</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5447b826acd685.20262018</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>manufacturer</criteria>
+      <condition>6</condition>
+      <pattern>/Lenovo|IBM/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^((0769).*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>3000 N200 (#0)</value>
+    </ruleaction>
+  </rule>
+</rules>

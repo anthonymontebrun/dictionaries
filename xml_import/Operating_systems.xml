@@ -1,0 +1,1323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>1</ranking>
+    <name>Clean Linux OS Name</name>
+    <description/>
+    <match>AND</match>
+    <is_active>0</is_active>
+    <comment>/(SUSE|SunOS|Red Hat|CentOS|Ubuntu|Debian|Fedora|AlmaLinux|Oracle|Amazon Linux)(?:\D+|)([\d.]*) ?(?:\(?([\w ]+)\)?)?/
+
+            Example :
+            Ubuntu 22.04.1 LTS -&gt; #0 = Ubuntu
+            SUSE Linux Enterprise Server 11 (x86_64)  -&gt;#0 = SUSE
+            SunOS -&gt; #0 = SunOS
+            Red Hat Enterprise Linux Server release 7.9 (Maipo) -&gt; #0 = Red Hat
+            Oracle Linux Server release 7.3 -&gt; #0 = Oracle
+            Fedora release 36 (Thirty Six) -&gt; #0 = Fedora
+            Debian GNU/Linux 9.5 (stretch) -&gt; #0 = Debian
+            CentOS Stream release 8 -&gt; #0 = CentOS
+            AlmaLinux 9.0 (Emerald Puma) -&gt; #0 = AlmaLinux
+            Amazon Linux 2023 -&gt; #0 = Amazon Linux</comment>
+    <is_recursive>1</is_recursive>
+    <uuid>clean_linux_os_name</uuid>
+    <condition>0</condition>
+    <date_creation>2025-05-06 11:07:59</date_creation>
+    <rulecriteria>
+      <criteria>os_name</criteria>
+      <condition>6</condition>
+      <pattern>/(SUSE|SunOS|Red Hat|CentOS|Ubuntu|Debian|Fedora|AlmaLinux|Oracle|Amazon Linux)(?:\D+|)([\d.]*) ?(?:\(?([\w ]+)\)?)?/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>#0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>2</ranking>
+    <name>Clean Windows OS Name</name>
+    <description/>
+    <match>AND</match>
+    <is_active>0</is_active>
+    <comment>/(Microsoft)(?&gt;\(R\)|®)? (Windows) (XP|\d\.\d|\d{1,4}|Vista)(™)? ?(.*)/
+
+            Example :
+            Microsoft Windows XP Professionnel -&gt; #1 : Windows
+            Microsoft Windows 7 Enterprise  -&gt; #1 : Windows
+            Microsoft® Windows Vista Professionnel  -&gt; #1 : Windows
+            Microsoft Windows XP Édition familiale  -&gt; #1 : Windows
+            Microsoft Windows 10 Entreprise  -&gt; #1 : Windows
+            Microsoft Windows 10 Professionnel  -&gt; #1 : Windows
+            Microsoft Windows 11 Professionnel  -&gt; #1 : Windows</comment>
+    <is_recursive>1</is_recursive>
+    <uuid>clean_windows_os_name</uuid>
+    <condition>0</condition>
+    <date_creation>2025-05-06 11:07:59</date_creation>
+    <rulecriteria>
+      <criteria>os_name</criteria>
+      <condition>6</condition>
+      <pattern>/(Microsoft)(?&gt;\(R\)|®)? (Windows) (XP|\d\.\d|\d{1,4}|Vista)(™)? ?(.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>#1</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>3</ranking>
+    <name>Clean Windows Server OS Name</name>
+    <description/>
+    <match>AND</match>
+    <is_active>0</is_active>
+    <comment>/(Microsoft)(?&gt;\(R\)|®)? (?:(Hyper-V|Windows)(?:\(R\))?) ((?:Server|))(?:\(R\)|®)? (\d{4}(?: R2)?)(?:[,\s]++)?([^\s]*)(?: Edition(?: x64)?)?$/
+
+            Example :
+            Microsoft Windows Server 2012 R2 Datacenter -&gt; #1 #2 : Windows Server
+            Microsoft(R) Windows(R) Server 2003, Standard Edition x64 -&gt; #1 #2 : Windows Server
+            Microsoft Hyper-V Server 2012 R2 -&gt; #1 #2 : Hyper-V Server
+            Microsoft® Windows Server® 2008 Standard -&gt; #1 #2 : Windows Server</comment>
+    <is_recursive>1</is_recursive>
+    <uuid>clean_windows_server_os_name</uuid>
+    <condition>0</condition>
+    <date_creation>2025-05-06 11:07:59</date_creation>
+    <rulecriteria>
+      <criteria>os_name</criteria>
+      <condition>6</condition>
+      <pattern>/(Microsoft)(?&gt;\(R\)|®)? (?:(Hyper-V|Windows)(?:\(R\))?) ((?:Server|))(?:\(R\)|®)? (\d{4}(?: R2)?)(?:[,\s]++)?([^\s]*)(?: Edition(?: x64)?)?$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>append_regex_result</action_type>
+      <field>name</field>
+      <value>#1 #2</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>1</ranking>
+    <name>TECLIB - IBM AIX</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-548f024b652448.51255985</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>AIX</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>AIX</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>2</ranking>
+    <name>TECLIB - Apple Mac OS X</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5861b8c33.35607889</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>MacOSX</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Mac OS X</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Lion</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>OS X</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Mac OS X</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>3</ranking>
+    <name>TECLIB - Apple Mac OS X Server</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5861c1652.35232737</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Mac OS X Server</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Mac OS X Server</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>4</ranking>
+    <name>TECLIB - VMWare</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5861c9c36.97236585</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>VMWare</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>VMWare</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>5</ranking>
+    <name>TECLIB - Microsoft Windows Server 2000</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5861d1d02.92888180</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/2000 (Server|Serveur)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Microsoft Windows 2000 Server</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>6</ranking>
+    <name>TECLIB - Microsoft Windows Server 2003</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5861da117.14789264</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(Enterprise|Standard|Web).*Edition/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>2003</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Microsoft Windows 2003 Server #0 Edition</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>7</ranking>
+    <name>TECLIB - Microsoft Windows Server 2003 SBS</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5861e2f43.51991528</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Server 2003(.*)Small Business Server/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Microsoft Windows 2003 Small Business Server</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>8</ranking>
+    <name>TECLIB - Microsoft Windows Server 2008</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5861ecc08.24277687</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/2008 (Enterprise|Entreprise|Standard|HPC Edition)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Microsoft Windows Server 2008 #0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>9</ranking>
+    <name>TECLIB - Microsoft Windows Server 2008 R2</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5861f6778.90437964</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/2008 R2 (Enterprise|Entreprise|Standard|Datacenter|Foundation)/  </pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Microsoft Windows Server 2008 R2 #0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>10</ranking>
+    <name>TECLIB - Microsoft Windows Server 2011 SBS</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5861fff33.93540681</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Small Business Server 2011 (.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Microsoft Windows Small Business Server 2011 #0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>11</ranking>
+    <name>TECLIB - Microsoft Windows Server 2012</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586209266.81578457</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/2012 (Enterprise|Entreprise|Standard)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Microsoft Windows Server 2012 #0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>12</ranking>
+    <name>TECLIB - Microsoft Windows 2000 Pro</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586212459.79061690</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Windows 2000 (Pro|Professionnal)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Microsoft Windows XP Professionnel</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>13</ranking>
+    <name>TECLIB - Microsoft Windows Embedded Standard</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment>Anciennement Windows XP Embedded</comment>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58621a975.95252251</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/XP[ ]?e/</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>embedded standard</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Microsoft Windows Embedded Standard</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>14</ranking>
+    <name>TECLIB - Microsoft Windows Embedded Compact</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment>Anciennement Windows CE</comment>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862230e6.10541412</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Win CE</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Windows CE</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Embedded Compact/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Microsoft Windows Embedded Compact</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>15</ranking>
+    <name>TECLIB - Microsoft Windows XP</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58622c079.02777841</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>Microsoft Windows XP</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>0</condition>
+      <pattern>Windows XP</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Microsoft Windows XP</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>16</ranking>
+    <name>TECLIB - Microsoft Windows XP Pro</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586234a81.09803382</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/XP Pro/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Microsoft Windows XP Professionnel</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>17</ranking>
+    <name>TECLIB - Microsoft Windows XP Home Edition</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58623c804.63934145</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>XP Home</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Microsoft Windows XP Home Edition</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>18</ranking>
+    <name>TECLIB - Microsoft Windows Vista</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586244d34.93842558</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Windows Vista(.*) (Professionnel|Intégrale|Premium|business|Home Basic|Familiale Basique|Familiale Premium|Entreprise|Ultimate)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Microsoft Windows Vista #1</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>19</ranking>
+    <name>TECLIB - Microsoft Windows 7 générique</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58624d291.32953568</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Windows [7|Seven](.*) (Pro OA|Starter|Professional|Professionnel|Intégrale|Premium|business|Home Basic|Familiale Basique|Familiale Premium|Entreprise|Ultimate).*/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Microsoft Windows 7 #1</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>20</ranking>
+    <name>TECLIB - Microsoft Windows 7 (autres)</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment>Cette règle doit passer après les autres pour Windows 7</comment>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862561e8.98349332</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Microsoft Windows 7</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Microsoft Windows 7</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>21</ranking>
+    <name>TECLIB - Microsoft Windows 8</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58625f956.10986901</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Windows 8 (Pro|Profesionnel|Profesionnal|Standard|Enterprise|Entreprise)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Microsoft Windows 8 #1</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>22</ranking>
+    <name>TECLIB - Microsoft Windows 8.1</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586269150.82281642</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Windows 8.1 ([a-zA-Z]*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Microsoft Windows 8.1 #0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>23</ranking>
+    <name>TECLIB - Microsoft Windows Preview</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586272cd3.63093793</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Windows ([0-9]).*Preview$/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Microsoft Windows #0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>24</ranking>
+    <name>TECLIB - Microsoft Windows (autres)</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58627c0f3.73380166</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Microsoft Version</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Microsoft Windows</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>25</ranking>
+    <name>TECLIB - Netapp</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586284a97.08370308</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>NetApp</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>NetApp</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>26</ranking>
+    <name>TECLIB - Oracle Solaris</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58628cc73.74159972</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(Solaris|SunOS)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Oracle Solaris</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>27</ranking>
+    <name>TECLIB - Dell Wyse ThinOS</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862954a6.40200009</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>thinos</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Dell Wyse ThinOS</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>28</ranking>
+    <name>TECLIB - HP Thinpro</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58629dfe7.40131515</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Thin[ ]?pro/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>HP Thinpro</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>29</ranking>
+    <name>TECLIB - Linux - Fedora</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862a72a7.72086436</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Fedora</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Fedora Linux</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>30</ranking>
+    <name>TECLIB - Linux - CentOS</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862af686.87070429</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>CentOS</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>CentOS Linux</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>31</ranking>
+    <name>TECLIB - Linux - Debian</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862b77c8.86560535</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Debian</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Debian GNU/Linux</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>32</ranking>
+    <name>TECLIB - Linux - RHEL</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862bfca1.85106084</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Red Hat</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Red Hat Enterprise Linux</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>33</ranking>
+    <name>TECLIB - Linux - Mint</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862c8722.47549586</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/(Linux Mint|LMDE)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Linux Mint</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>34</ranking>
+    <name>TECLIB - Linux - Gentoo</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862d0d31.25334932</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Gentoo</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Gentoo Linux</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>35</ranking>
+    <name>TECLIB - Linux - crunchbang</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862d8fd7.09906521</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>crunchbang</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Linux Crunchbang</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>36</ranking>
+    <name>TECLIB - Linux - Mandriva</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862e17a9.54298605</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Mandriva</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Mandriva Linux</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>37</ranking>
+    <name>TECLIB - Linux - Secure Remix</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862ea199.16005429</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Linux-Secure-Remix</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Linux Secure Remix</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>38</ranking>
+    <name>TECLIB - Linux - SLES</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862f35a8.69704252</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Suse Linux</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Suse Linux Enterprise Server</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>39</ranking>
+    <name>TECLIB - Linux - Neolinux</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5862fbf55.69769748</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>neolinux</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>NeoLinux</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>40</ranking>
+    <name>TECLIB - Linux - GIO</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863049c8.26882476</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Linux GIO</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Linux GIO</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>41</ranking>
+    <name>TECLIB - Linux - Bodhi</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58630dc10.07936790</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>bodhi</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Bodhi Linux</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>42</ranking>
+    <name>TECLIB - Linux - Slackware</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f5863165c5.59388206</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>slackware</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Slackware Linux</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>43</ranking>
+    <name>TECLIB - Linux - openSuse</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58631f511.11804410</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>openSuse</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>openSuse Linux</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>44</ranking>
+    <name>TECLIB - Linux - Mageia</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586327fd9.35503668</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>mageia</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Mageia Linux</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>45</ranking>
+    <name>TECLIB - Linux - Ubuntu</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586331097.57762112</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Ubuntu</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Ubuntu Linux</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>46</ranking>
+    <name>TECLIB - Linux - Oracle</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586338813.75704026</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Enterprise Linux Enterprise Linux</pattern>
+    </rulecriteria>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Oracle Linux</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Oracle Linux</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>47</ranking>
+    <name>TECLIB - Linux - Thinstation</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment>http://en.wikipedia.org/wiki/Thinstation</comment>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f586341742.44124061</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>2</condition>
+      <pattern>Thinstation</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Linux Thinstation</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>48</ranking>
+    <name>TECLIB - Android</name>
+    <description/>
+    <match>OR</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>f862f693-bed2c499-5367f58634a483.05612846</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/Android[ |_]([0-9\.]*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>assign</action_type>
+      <field>name</field>
+      <value>Android #0</value>
+    </ruleaction>
+  </rule>
+  <rule>
+    <entities_id>Root entity</entities_id>
+    <sub_type>RuleDictionnaryOperatingSystem</sub_type>
+    <ranking>49</ranking>
+    <name>TECLIB - Zentyal</name>
+    <description/>
+    <match>AND</match>
+    <is_active>1</is_active>
+    <comment/>
+    <is_recursive>0</is_recursive>
+    <uuid>5f592554-f37490bd-5450e56e0d5467.37840757</uuid>
+    <condition>0</condition>
+    <date_creation>2018-07-04 14:36:57</date_creation>
+    <rulecriteria>
+      <criteria>name</criteria>
+      <condition>6</condition>
+      <pattern>/^(Zentyal.*)/</pattern>
+    </rulecriteria>
+    <ruleaction>
+      <action_type>regex_result</action_type>
+      <field>name</field>
+      <value>Linux #0</value>
+    </ruleaction>
+  </rule>
+</rules>
