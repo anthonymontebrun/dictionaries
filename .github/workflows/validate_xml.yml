@@ -1,0 +1,24 @@
+name: Validate XML Files
+
+on:
+  push:
+    branches: 
+      - main
+  pull_request:
+
+jobs:
+  validate_xml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Install xmllint
+        run: sudo apt-get install -y libxml2-utils
+
+      - name: Validate XML files
+        run: |
+          for file in xml_import/*.xml; do
+            echo "Validating $file..."
+            xmllint --noout --schema schema.xsd "$file" || exit 1
+          done

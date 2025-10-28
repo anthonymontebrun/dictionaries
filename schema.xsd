@@ -1,0 +1,44 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="rules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="rule" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="entities_id"/>
+              <xs:element type="xs:string" name="sub_type"/>
+              <xs:element type="xs:short" name="ranking"/>
+              <xs:element type="xs:string" name="name"/>
+              <xs:element type="xs:string" name="description"/>
+              <xs:element type="xs:string" name="match"/>
+              <xs:element type="xs:byte" name="is_active"/>
+              <xs:element type="xs:string" name="comment"/>
+              <xs:element type="xs:byte" name="is_recursive"/>
+              <xs:element type="xs:string" name="uuid"/>
+              <xs:element type="xs:byte" name="condition"/>
+              <xs:element type="xs:string" name="date_creation"/>
+              <xs:element name="rulecriteria" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="criteria"/>
+                    <xs:element type="xs:byte" name="condition"/>
+                    <xs:element type="xs:string" name="pattern"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ruleaction">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="action_type"/>
+                    <xs:element type="xs:string" name="field"/>
+                    <xs:element type="xs:string" name="value"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
