@@ -19,6 +19,5 @@ jobs:
       - name: Validate XML files
         run: |
           for file in xml_import/*.xml; do
-            echo "Validating $file..."
             xmllint --noout --schema schema.xsd "$file" || exit 1
           done
