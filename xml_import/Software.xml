@@ -3828,4 +3828,38 @@
       <value>Google Inc.</value>
     </ruleaction>
   </rule>
+  <rule>
+		<entities_id>Root entity</entities_id>
+		<sub_type>RuleDictionnarySoftware</sub_type>
+		<ranking>113</ranking>
+		<name>TECLIB - GLPI Agent</name>
+		<description></description>
+		<match>OR</match>
+		<is_active>1</is_active>
+		<comment></comment>
+		<is_recursive>0</is_recursive>
+		<uuid>45f23809-b2d8e96f-6669c00f7cb219.74406040</uuid>
+		<condition>0</condition>
+		<date_creation>2024-06-12 17:34:39</date_creation>
+		<rulecriteria>
+			<criteria>name</criteria>
+			<condition>6</condition>
+			<pattern>/^GLPI Agent (.*)/</pattern>
+		</rulecriteria>
+		<ruleaction>
+			<action_type>assign</action_type>
+			<field>name</field>
+			<value>GLPI Agent</value>
+		</ruleaction>
+		<ruleaction>
+			<action_type>assign</action_type>
+			<field>manufacturer</field>
+			<value>Teclib'</value>
+		</ruleaction>
+		<ruleaction>
+			<action_type>append_regex_result</action_type>
+			<field>version</field>
+			<value>#0</value>
+		</ruleaction>
+	</rule>
 </rules>
